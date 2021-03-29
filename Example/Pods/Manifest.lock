@@ -1,0 +1,16 @@
+PODS:
+  - ReloadlySDK/Airtime (0.1.0)
+
+DEPENDENCIES:
+  - ReloadlySDK/Airtime (from `../`)
+
+EXTERNAL SOURCES:
+  ReloadlySDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ReloadlySDK: d86442e4ea2fcdb3dca45b06b0435c7fc7e231eb
+
+PODFILE CHECKSUM: bc93f7316237b76e7975b7a5d8542f870129145b
+
+COCOAPODS: 1.10.1

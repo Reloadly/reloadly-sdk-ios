@@ -1,0 +1,38 @@
+{
+  "name": "ReloadlySDK",
+  "version": "0.1.0",
+  "summary": "A short description of ReloadlyAuthentication.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/4taras4/ReloadlyAuthentication",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "4taras4": "4taras4@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/4taras4/ReloadlyAuthentication.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": [
+    "4.2",
+    "5.0"
+  ],
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ReloadlyAuthentication/Classes/**/*",
+  "default_subspecs": "Airtime",
+  "subspecs": [
+    {
+      "name": "Airtime",
+      "source_files": "ReloadlyAuthentication/Classes/ReloadlyAirtime/**/*.swift"
+    },
+    {
+      "name": "Authentication",
+      "source_files": "ReloadlyAuthentication/Classes/ReloadlyAuthentication/**/*.swift"
+    }
+  ],
+  "swift_version": "5.0"
+}
