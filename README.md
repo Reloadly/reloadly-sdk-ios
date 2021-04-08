@@ -81,6 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 Also you can setup additional settings like logLevel, proxy configuration.
 
+### Demo application
+You can find examples at folder Example and run .workspace to test demo application with integrated SDK
 
 ## Getting Help
 
