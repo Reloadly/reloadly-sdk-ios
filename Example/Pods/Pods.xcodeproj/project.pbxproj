@@ -30,6 +30,7 @@
 		1A7743F326033FC800D34144 /* ProxyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743D926033FC700D34144 /* ProxyConfigurator.swift */; };
 		1A7743F426033FC800D34144 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743DA26033FC700D34144 /* Keychain.swift */; };
 		1A7743F526033FC800D34144 /* AuthenticationBackendEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743DB26033FC700D34144 /* AuthenticationBackendEnvironment.swift */; };
+		1AD90883261F05B900A59309 /* TelemetryUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD90882261F05B900A59309 /* TelemetryUtil.swift */; };
 		30802B8A10C02A81289543FC17C784FB /* ReloadlySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F30ADC5E7595754A71AF4B2160358AA /* ReloadlySDK-dummy.m */; };
 		34C8FE26302D5C4C31D0BDAA657082B6 /* Pods-ReloadlyAuthentication_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FECCC601891B10E1F805EE8C1A0DDCDC /* Pods-ReloadlyAuthentication_Example-dummy.m */; };
 		65D67187C39EDFF2C3EA383396A0FF0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -81,6 +82,7 @@
 		1A7743D926033FC700D34144 /* ProxyConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyConfigurator.swift; sourceTree = "<group>"; };
 		1A7743DA26033FC700D34144 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		1A7743DB26033FC700D34144 /* AuthenticationBackendEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationBackendEnvironment.swift; sourceTree = "<group>"; };
+		1AD90882261F05B900A59309 /* TelemetryUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryUtil.swift; sourceTree = "<group>"; };
 		2784C7F9D6931217DE9DFD6B7698BFCF /* Pods-ReloadlyAuthentication_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReloadlyAuthentication_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2F30ADC5E7595754A71AF4B2160358AA /* ReloadlySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReloadlySDK-dummy.m"; sourceTree = "<group>"; };
 		2FDD05B23DFBF54DA158A83B0E39D0D9 /* Pods-ReloadlyAuthentication_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReloadlyAuthentication_Example-Info.plist"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				1A7743D926033FC700D34144 /* ProxyConfigurator.swift */,
 				1A7743DA26033FC700D34144 /* Keychain.swift */,
 				1A7743DB26033FC700D34144 /* AuthenticationBackendEnvironment.swift */,
+				1AD90882261F05B900A59309 /* TelemetryUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				1A7743EE26033FC800D34144 /* NetworkManager.swift in Sources */,
 				1A7743F326033FC800D34144 /* ProxyConfigurator.swift in Sources */,
 				1A7743F426033FC800D34144 /* Keychain.swift in Sources */,
+				1AD90883261F05B900A59309 /* TelemetryUtil.swift in Sources */,
 				1A7743E826033FC800D34144 /* Logger.swift in Sources */,
 				1A7743F226033FC800D34144 /* AuthenticationService.swift in Sources */,
 				1A7743ED26033FC800D34144 /* Formatters.swift in Sources */,

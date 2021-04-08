@@ -126,8 +126,8 @@
             filePath = "../ReloadlySDK/Classes/ReloadlyAuthentication/ReloadlyAuthentication.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "requestAccessToken(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -146,113 +146,6 @@
             endingLineNumber = "11"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - af07ec3cfa99710a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.__deallocating_deinit"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - 98ae72eabb7bd051"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; ReloadlyAuthentication_Tests.DemoAppTest"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - 8cb75b05f3f4726a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; ReloadlyAuthentication_Tests.DemoAppTest"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "63">
-               </Location>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - 9f14b262c01059b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.__allocating_init(selector: ObjectiveC.Selector) -&gt; ReloadlyAuthentication_Tests.DemoAppTest"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - 9d58b113bcea060a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.init(selector: ObjectiveC.Selector) -&gt; ReloadlyAuthentication_Tests.DemoAppTest"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "63">
-               </Location>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - a10f4b7dede96ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.__allocating_init() -&gt; ReloadlyAuthentication_Tests.DemoAppTest"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "4FF65B99-DFCC-4CA8-B438-F1A2887CF018 - 2aa0f1a4adecba6a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ReloadlyAuthentication_Tests.DemoAppTest.init() -&gt; ReloadlyAuthentication_Tests.DemoAppTest"
-                  moduleName = "ReloadlyAuthentication_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tarasmarkevych/Desktop/My/reloadly-authentication/Example/Tests/DemoAppTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "47">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -316,6 +209,22 @@
             startingLineNumber = "28"
             endingLineNumber = "28"
             landmarkName = "checkActionForOutlet(outlet:actionName:event:controller:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0816CCF2-6047-4C9C-BA6E-7F464A163D8C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../ReloadlySDK/Classes/ReloadlyAuthentication/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "request(serviceURL:httpMethod:parameters:proxyConfigurator:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

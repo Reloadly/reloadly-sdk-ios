@@ -19,7 +19,7 @@ public class ReloadlyAuthentication {
     public static let shared = ReloadlyAuthentication()
     let storageKey = "OAuth2Token"
     /// Service's backend environment. Default value is `.production`. Make sure to use `.production` in you release (App Store)
-    public private(set) var service: AuthenticationServiceProtocol = AuthenticationService(backendEnvironment: .production)
+    public private(set) var service: AuthenticationServiceProtocol = AuthenticationService(backendEnvironment: .sandbox)
     let storage = Keychain()
     private var clientId: String?
     private var clientSecret: String?
@@ -54,12 +54,13 @@ public class ReloadlyAuthentication {
      ```
      
      */
-    public func configure(with clientId: String, clientSecret: String, service: AuthenticationServiceProtocol, logLevel: Level = .info, proxyConfiguration: ProxyConfigurator? = nil) {
+    public func configure(with clientId: String, clientSecret: String, service: AuthenticationServiceProtocol, logLevel: Level = .info, proxyConfiguration: ProxyConfigurator? = nil, useTelemetry: Bool = true) {
         self.service = service
         self.clientId = clientId
         self.clientSecret = clientSecret
         self.logger.minLevel = logLevel
         self.proxyConfiguration = proxyConfiguration
+        NetworkManager.shared.useTelemetry = useTelemetry
     }
     
     public func setCustomTimeouts(readTimeout: Double, writeTimeout: Double) {

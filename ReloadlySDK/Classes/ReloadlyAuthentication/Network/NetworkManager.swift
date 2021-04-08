@@ -18,6 +18,8 @@ class NetworkManager {
     
     var timeoutIntervalForRequest = 60.0
     var timeoutIntervalForResource = 60.0
+    var useTelemetry = true
+    let getTelemetry = TelemetryUtil.getTelemetry()
     
     func dataTask(serviceURL: String, httpMethod: HttpMethod, parameters: [String: Any]?, proxyConfigurator: ProxyConfigurator?, completion: @escaping (Result<Data, Error>) -> Void) -> Void {
         request(serviceURL: serviceURL, httpMethod: httpMethod, parameters: parameters, proxyConfigurator: proxyConfigurator, completion: completion)
@@ -76,6 +78,9 @@ class NetworkManager {
         sessionConfig.timeoutIntervalForResource = timeoutIntervalForResource
         var session = URLSession(configuration: sessionConfig)
         
+        if useTelemetry {
+            request.setValue(getTelemetry, forHTTPHeaderField: "Reloadly-Client")
+        }
         if let authToken = ReloadlyAuthentication.shared.getAccessToken(), authToken.isValid {
             request.setValue("Bearer \(authToken.accessToken)", forHTTPHeaderField: "Authorization")
         } else {
