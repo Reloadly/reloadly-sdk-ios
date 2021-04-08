@@ -30,17 +30,5 @@ class DemoAppTest: XCTestCase {
             return(actions.contains(actionName))
         }
         return false
-    }
-    
-    func testScheduleActionIsConnected() {
-        guard let viewController = viewController else {
-            return
-        }
-        XCTAssertFalse(checkActionForOutlet(outlet: viewController.testButton, actionName: "authAction", event: .touchUpInside, controller: viewController))
-    }
-
-    func testGetBalance() {
-        viewController?.authAction()
-        XCTAssertNotNil(viewController)
-    }
+    }    
 }

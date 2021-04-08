@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
                                                 clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
-                                                service: AuthenticationService(backendEnvironment: .sandbox), logLevel: .info)
+                                                service: AuthenticationService(backendEnvironment: .sandbox), logLevel: .debug)
         return true
     }
 }

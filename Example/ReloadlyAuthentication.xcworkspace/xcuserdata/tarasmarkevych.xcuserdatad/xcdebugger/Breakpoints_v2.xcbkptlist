@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "120A1B7C-2A54-487E-B897-B0F928CB9478"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../ReloadlySDK/Classes/ReloadlyAuthentication/Models/OAuth2Token.swift"
@@ -126,8 +126,8 @@
             filePath = "../ReloadlySDK/Classes/ReloadlyAuthentication/ReloadlyAuthentication.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "requestAccessToken(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -216,7 +216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0816CCF2-6047-4C9C-BA6E-7F464A163D8C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../ReloadlySDK/Classes/ReloadlyAuthentication/Network/NetworkManager.swift"

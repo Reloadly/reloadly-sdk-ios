@@ -80,7 +80,7 @@ public class ReloadlyAirtime {
                                     startDate: String? = nil,
                                     endDate: String? = nil,
                                     customIdentifier: String? = nil,
-                                    completionHandler: @escaping (Result<Discounts, Error>) -> Void) {
+                                    completionHandler: @escaping (Result<Transactions, Error>) -> Void) {
         var endpoint = "/topups/reports/transactions?page=\(page)&size=\(size)"
         if let countryCode = countryCode {
             endpoint.append("&countryCode=\(countryCode)")
@@ -103,7 +103,7 @@ public class ReloadlyAirtime {
         NetworkManager.shared.dataTask(serviceURL: endpoint, httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {
             case .success(let data):
-                let discountsArray: Result<Discounts, Error> = self.processSuccess(data: data)
+                let discountsArray: Result<Transactions, Error> = self.processSuccess(data: data)
                 completionHandler(discountsArray)
             case .failure(let error):
                 completionHandler(.failure(error))

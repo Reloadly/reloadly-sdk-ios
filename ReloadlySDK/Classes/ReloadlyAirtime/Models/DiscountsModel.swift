@@ -36,15 +36,44 @@ public struct Discounts: Codable {
     }
 }
 
+
+public struct Transactions: Codable {
+    public let content: [Topups]
+    public let pageable: Pageable
+    public let totalElements: Int
+    public let totalPages: Int
+    public let last: Bool
+    public let sort: Sort
+    public let first: Bool
+    public let numberOfElements: Int
+    public let size: Int
+    public let number: Int
+    public let empty: Bool
+
+    public init(content: [Topups], pageable: Pageable, totalElements: Int, totalPages: Int, last: Bool, sort: Sort, first: Bool, numberOfElements: Int, size: Int, number: Int, empty: Bool) {
+        self.content = content
+        self.pageable = pageable
+        self.totalElements = totalElements
+        self.totalPages = totalPages
+        self.last = last
+        self.sort = sort
+        self.first = first
+        self.numberOfElements = numberOfElements
+        self.size = size
+        self.number = number
+        self.empty = empty
+    }
+}
+
 // MARK: - Content
 public struct Content: Codable {
-    public let percentage: Double
-    public let internationalPercentage: Double
-    public let localPercentage: Double
-    public let updatedAt: String
-    public let `operator`: Operator
+    public let percentage: Double?
+    public let internationalPercentage: Double?
+    public let localPercentage: Double?
+    public let updatedAt: String?
+    public let `operator`: Operator?
 
-    public init(percentage: Double, internationalPercentage: Double, localPercentage: Double, updatedAt: String, contentOperator: Operator) {
+    public init(percentage: Double?, internationalPercentage: Double?, localPercentage: Double?, updatedAt: String?, contentOperator: Operator?) {
         self.percentage = percentage
         self.internationalPercentage = internationalPercentage
         self.localPercentage = localPercentage
@@ -57,13 +86,13 @@ public struct Content: Codable {
 public struct Operator: Codable {
     public let id: Int
     public let operatorId: Int
-    public let name: String
-    public let countryCode: String
-    public let data: Bool
-    public let bundle: Bool
-    public let status: Bool
+    public let name: String?
+    public let countryCode: String?
+    public let data: Bool?
+    public let bundle: Bool?
+    public let status: Bool?
 
-    public init(id: Int, operatorId: Int, name: String, countryCode: String, data: Bool, bundle: Bool, status: Bool) {
+    public init(id: Int, operatorId: Int, name: String?, countryCode: String?, data: Bool?, bundle: Bool?, status: Bool?) {
         self.id = id
         self.operatorId = operatorId
         self.name = name

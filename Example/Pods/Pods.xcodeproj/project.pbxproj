@@ -18,7 +18,6 @@
 		1A7743E326033FC700D34144 /* ReloadlyAirtime+Promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743C326033FC700D34144 /* ReloadlyAirtime+Promotions.swift */; };
 		1A7743E426033FC700D34144 /* ReloadlyAirtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743C426033FC700D34144 /* ReloadlyAirtime.swift */; };
 		1A7743E526033FC700D34144 /* ReloadlyAirtime+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743C526033FC700D34144 /* ReloadlyAirtime+Operators.swift */; };
-		1A7743E626033FC700D34144 /* ReloadlyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743C726033FC700D34144 /* ReloadlyAccount.swift */; };
 		1A7743E826033FC800D34144 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743CB26033FC700D34144 /* Logger.swift */; };
 		1A7743EA26033FC800D34144 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743CD26033FC700D34144 /* Formatter.swift */; };
 		1A7743ED26033FC800D34144 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7743D026033FC700D34144 /* Formatters.swift */; };
@@ -70,7 +69,6 @@
 		1A7743C326033FC700D34144 /* ReloadlyAirtime+Promotions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReloadlyAirtime+Promotions.swift"; sourceTree = "<group>"; };
 		1A7743C426033FC700D34144 /* ReloadlyAirtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReloadlyAirtime.swift; sourceTree = "<group>"; };
 		1A7743C526033FC700D34144 /* ReloadlyAirtime+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReloadlyAirtime+Operators.swift"; sourceTree = "<group>"; };
-		1A7743C726033FC700D34144 /* ReloadlyAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReloadlyAccount.swift; sourceTree = "<group>"; };
 		1A7743CB26033FC700D34144 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1A7743CD26033FC700D34144 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		1A7743D026033FC700D34144 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				1A7743C326033FC700D34144 /* ReloadlyAirtime+Promotions.swift */,
 				1A7743C426033FC700D34144 /* ReloadlyAirtime.swift */,
 				1A7743C526033FC700D34144 /* ReloadlyAirtime+Operators.swift */,
-				1A7743C626033FC700D34144 /* Account */,
 			);
 			name = ReloadlyAirtime;
 			path = ReloadlySDK/Classes/ReloadlyAirtime;
@@ -169,14 +166,6 @@
 				1A7743C226033FC700D34144 /* TopupsModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		1A7743C626033FC700D34144 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				1A7743C726033FC700D34144 /* ReloadlyAccount.swift */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		1A7743C826033FC700D34144 /* ReloadlyAuthentication */ = {
@@ -517,7 +506,6 @@
 			files = (
 				1A7743EF26033FC800D34144 /* ErrorModel.swift in Sources */,
 				1A7743E226033FC700D34144 /* TopupsModel.swift in Sources */,
-				1A7743E626033FC700D34144 /* ReloadlyAccount.swift in Sources */,
 				1A7743DC26033FC700D34144 /* BalanceModel.swift in Sources */,
 				1A7743DF26033FC700D34144 /* OperatorModel.swift in Sources */,
 				1A7743F526033FC800D34144 /* AuthenticationBackendEnvironment.swift in Sources */,

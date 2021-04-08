@@ -44,13 +44,15 @@ public class ReloadlyAuthentication {
      - parameter service: Set environment wich you want to use (production or sandbox).
      - parameter logLevel: Change loger level to see all logs, by default used .info level.
      - parameter proxyConfiguration: Proxy Configuration, username and password are optional.
+     - parameter useTelemetry: useTelemetry,by default is true but you can set it to false
+
 
      # Notes: #
      1. Put this code at  `func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)` and set all info
      
      # Example #
      ```
-        ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9", clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh", service: AuthenticationService(backendEnvironment: .sandbox))
+        ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOtestrw", clientSecret: "c7gcNR4dOIAlmalojV35okbq--testsdfdsfsf", service: AuthenticationService(backendEnvironment: .sandbox))
      ```
      
      */

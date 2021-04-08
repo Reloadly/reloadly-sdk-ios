@@ -37,15 +37,15 @@ public struct PromotionArray: Codable {
 public struct Promotion: Codable {
     public let promotionId: Int
     public let operatorId: Int
-    public let title: String
-    public let title2: String
-    public let contentDescription: String
-    public let startDate: String
-    public let endDate: String
-    public let denominations: String
+    public let title: String?
+    public let title2: String?
+    public let contentDescription: String?
+    public let startDate: String?
+    public let endDate: String?
+    public let denominations: String?
     public let localDenominations: String?
 
-    public init(promotionId: Int, operatorId: Int, title: String, title2: String, contentDescription: String, startDate: String, endDate: String, denominations: String, localDenominations: String?) {
+    public init(promotionId: Int, operatorId: Int, title: String?, title2: String?, contentDescription: String?, startDate: String?, endDate: String?, denominations: String?, localDenominations: String?) {
         self.promotionId = promotionId
         self.operatorId = operatorId
         self.title = title
