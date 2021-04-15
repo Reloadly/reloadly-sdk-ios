@@ -52,9 +52,8 @@ public class ReloadlyAuthentication {
      
      # Example #
      ```
-        ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOtestrw", clientSecret: "c7gcNR4dOIAlmalojV35okbq--testsdfdsfsf", service: AuthenticationService(backendEnvironment: .sandbox))
+        ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOtestrw", clientSecret: "c7gcNR4dOIAlmalojV35okbq--testsdfdsfsf", service: AuthenticationService(backendEnvironment: .sandbox), useTelemetry: true)
      ```
-     
      */
     public func configure(with clientId: String, clientSecret: String, service: AuthenticationServiceProtocol, logLevel: Level = .info, proxyConfiguration: ProxyConfigurator? = nil, useTelemetry: Bool = true) {
         self.service = service

@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
-                                                clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
+        ReloadlyAuthentication.shared.configure(with: "",
+                                                clientSecret: "",
                                                 service: AuthenticationService(backendEnvironment: .sandbox), logLevel: .debug)
         return true
     }

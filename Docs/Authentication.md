@@ -8,7 +8,7 @@ Call an `ReloadlyAuthentication.shared.configure` instance by providing the Appl
 the [dashboard](https://www.reloadly.com/developers/api-settings).
 
 Import ReloadlySDK
-```swift 
+```swift
 import ReloadlySDK
 ```
 Initialise library at `AppDelegate`
@@ -74,7 +74,7 @@ Used to configure additional options, connect and read timeouts can be configure
 
 ### Proxy Configuration
 
-```java
+```swift
   let proxyConfiguratorWithCredentials = ProxyConfigurator(hostUrl: "url", port: 8043, username: "username", password: "password")
   ReloadlyAuthentication.shared.configure(with: "id",
                                                 clientSecret: "secret",
@@ -83,3 +83,18 @@ Used to configure additional options, connect and read timeouts can be configure
 
 ```
 Also username and password can be nil to use proxy without credentials
+
+
+### Request latency telemetry
+
+By default, the library sends request latency telemetry to Reloadly. These numbers help Reloadly improve the overall latency of its API for all users.
+
+You can disable this behavior if you prefer:
+
+```swift
+ReloadlyAuthentication.shared.configure(with: "id",
+                                            clientSecret: "secret",
+                                            service: AuthenticationService(backendEnvironment: .sandbox),
+                                            logLevel: .info, useTelemetry: false)
+
+```
