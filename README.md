@@ -1,3 +1,5 @@
+<img src="icon.png" width="130" height="150" align="right" alt="reloadly-swift-icon"/>
+
 # ReloadlySDK
 
 [![Version](https://img.shields.io/cocoapods/v/ReloadlySDK.svg?style=flat)](https://cocoapods.org/pods/ReloadlySDK)
