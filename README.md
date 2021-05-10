@@ -1,6 +1,6 @@
-<img src="icon.png" width="130" height="150" align="right" alt="reloadly-swift-icon"/>
+<img src="icon.png" width="130" height="74" align="right" alt="reloadly-swift-icon"/>
 
-# ReloadlySDK
+# Reloadly SDK for iOS and iPadOS
 
 [![Version](https://img.shields.io/cocoapods/v/ReloadlySDK.svg?style=flat)](https://cocoapods.org/pods/ReloadlySDK)
 [![License](https://img.shields.io/cocoapods/l/ReloadlySDK.svg?style=flat)](https://github.com/Reloadly/reloadly-sdk-ios/blob/main/LICENSE)
