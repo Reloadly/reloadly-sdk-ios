@@ -1,0 +1,4 @@
+osx_image: xcode12.5
+language: objective-c
+script:
+- pod lib lint --allow-warnings --no-clean
