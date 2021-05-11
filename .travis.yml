@@ -1,7 +1,5 @@
 osx_image: xcode12.5
 language: objective-c
-xcode_workspace: ReloadlyAuthentication.xcworkspace
-xcode_scheme: ReloadlyAuthentication-Example
 podfile: "./Example/Podfile"
 before_install:
 - gem install cocoapods
@@ -12,6 +10,6 @@ script:
 - pod lib lint --allow-warnings --no-clean
 script:
 - cd Example
-- xcodebuild -scheme xcode_scheme -workspace xcode_workspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=14.5' build test
+- xcodebuild -scheme ReloadlyAuthentication-Example -workspace ReloadlyAuthentication.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=14.5' build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
