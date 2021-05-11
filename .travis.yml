@@ -1,7 +1,5 @@
 osx_image: xcode12.5
 language: objective-c
-xcode_workspace: ReloadlyAuthentication.xcworkspace
-xcode_scheme: ReloadlyAuthentication-Example
 podfile: "./Example/Podfile"
 before_install:
 - gem install cocoapods
