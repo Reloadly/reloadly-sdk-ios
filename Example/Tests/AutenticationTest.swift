@@ -25,11 +25,6 @@ class AutenticationTests: XCTestCase {
         }
     }
     
-    func testGetAccessToken() {
-        let token = ReloadlyAuthentication.shared.getAccessToken()
-        XCTAssertNotNil(token)
-    }
-    
     func testSetCustomTimeout() {
         ReloadlyAuthentication.shared.setCustomTimeouts(readTimeout: 30.0, writeTimeout: 30.0)
     }
