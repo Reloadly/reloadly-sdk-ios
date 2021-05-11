@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/ReloadlySDK.svg?style=flat)](https://github.com/Reloadly/reloadly-sdk-ios/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://cocoapods.org/pods/ReloadlySDK)
 [![Build Status](https://travis-ci.com/Reloadly/reloadly-sdk-ios.svg?branch=main)](https://travis-ci.org/Reloadly/reloadly-sdk-ios)
-[![codecov](https://codecov.io/gh/Reloadly/reloadly-sdk-ios/branch/main/graph/badge.svg?token=PDTA9NYJA3)](https://codecov.io/gh/Reloadly/reloadly-sdk-ios)
+[![codecov](https://codecov.io/gh/Reloadly/reloadly-sdk-ios/branch/main/graph/badge.svg?token=PDTA9NYJA3)](https://app.codecov.io/gh/Reloadly/reloadly-sdk-ios)
 
 The **Reloadly SDK** enables iOS developers to easily work with [Reloadly Services][reloadly-main-site]
 and build scalable solutions.
