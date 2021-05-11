@@ -12,6 +12,6 @@ before_install:
 script:
 - pod lib lint --allow-warnings --no-clean
 script:
-  - xctool -project xcode_workspace -scheme xcode_scheme build test -sdk env
+- xcodebuild -scheme ReloadlyAuthentication-Example -workspace ../Example/ReloadlyAuthentication.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=14.5' build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
