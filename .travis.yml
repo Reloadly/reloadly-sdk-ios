@@ -1,11 +1,5 @@
 osx_image: xcode12.5
 language: objective-c
-podfile: "./Example/Podfile"
-before_install:
-- gem install cocoapods
-- which pod
-- pod --version
-- gem install xcpretty
 script:
 - pod lib lint --allow-warnings --no-clean
 script:
