@@ -16,22 +16,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-    
-}
-
-extension ViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return actions.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell")!
-        cell.textLabel?.text = actions[indexPath.row]
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
+    func selectItemAt(index: Int) {
+        switch index {
         case 0:
             ReloadlyAirtime.shared.getAccountBalance() { result in
                 DispatchQueue.main.async {
@@ -72,6 +58,18 @@ extension ViewController {
             break
         }
     }
+}
+
+extension ViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return actions.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell")!
+        cell.textLabel?.text = actions[indexPath.row]
+        return cell
+    }
     
     func process<T>(result: Result<T, Error>) {
         switch result {
@@ -80,6 +78,10 @@ extension ViewController {
         case .failure(let error):
             showAlert(title: "Error", message: error.localizedDescription)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectItemAt(index: indexPath.row)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

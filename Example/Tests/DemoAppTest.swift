@@ -20,15 +20,31 @@ class DemoAppTest: XCTestCase {
         viewController = vc
     }
     
+    func testSelectedItems() {
+        for i in 0..<6 {
+            viewController?.selectItemAt(index: i)
+            XCTAssertLessThanOrEqual(i, 6, "Success")
+        }
+    }
+    
+    func testShowAlert() {
+        viewController?.showAlert(title: "test", message: nil)
+        XCTAssertNotNil(viewController)
+    }
+    
+    func testProcessSuccess() {
+        viewController?.process(result: .success(Data()))
+        XCTAssertNotNil(viewController)
+    }
+    
+    func testDidSelect() {
+        for i in 0...6 {
+            viewController!.tableView(viewController!.tableView, didSelectRowAt: IndexPath(row: i, section: 0))
+        }
+        XCTAssertNotNil(viewController)
+    }
+    
     override func tearDown() {
         super.tearDown()
     }
-    
-    func checkActionForOutlet(outlet: UIButton?, actionName: String, event: UIControl.Event, controller: UIViewController) -> Bool {
-        if let unwrappedButton = outlet {
-            let actions: [String] = unwrappedButton.actions(forTarget: controller, forControlEvent: event)!
-            return(actions.contains(actionName))
-        }
-        return false
-    }    
 }
