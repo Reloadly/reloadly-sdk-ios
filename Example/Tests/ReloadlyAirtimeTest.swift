@@ -91,7 +91,7 @@ class ReloadlyAirtimeTest: XCTestCase {
     }
     
     func testGetOperatorById() {
-        ReloadlyAirtime.shared.getOperatorById(id: 1)  { result in
+        ReloadlyAirtime.shared.getOperatorById(id: 1, suggestedAmounts: true, suggestedAmountsMap: true, supportsGeographicalRechargePlan: true)  { result in
             XCTAssertNotNil(result)
         }
     }
