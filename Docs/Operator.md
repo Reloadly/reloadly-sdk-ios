@@ -49,12 +49,12 @@ Additional operator filters may be enabled
 ```
 
 By default all the above filters are set to ```true``` except for ```includeSuggestedAmounts```
-and ```includeSuggestedAmountsMap```
+,  ```includeSuggestedAmountsMap``` and ```supportsGeographicalRechargePlan```
 
 ## Operators - Get by id
 
 ```swift
-  ReloadlyAirtime.shared.getOperatorById(id: Int, suggestedAmounts: Bool?, suggestedAmountsMap: Bool?) { result in
+  ReloadlyAirtime.shared.getOperatorById(id: Int, suggestedAmounts: Bool?, suggestedAmountsMap: Bool?, supportsGeographicalRechargePlan: Bool? = nil,) { result in
       switch result {
       case .success(let data):
           print(data)

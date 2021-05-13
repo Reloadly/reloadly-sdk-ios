@@ -91,7 +91,7 @@ class ReloadlyAirtimeTest: XCTestCase {
     }
     
     func testGetOperatorById() {
-        ReloadlyAirtime.shared.getOperatorById(id: 1)  { result in
+        ReloadlyAirtime.shared.getOperatorById(id: 1, suggestedAmounts: true, suggestedAmountsMap: true, supportsGeographicalRechargePlan: true)  { result in
             XCTAssertNotNil(result)
         }
     }
@@ -169,7 +169,8 @@ class ReloadlyAirtimeTest: XCTestCase {
     }
     
     func testOperatorArray() {
-        let operatorModel = OperatorArray(content: [OperatorDetails(id: 24, operatorId: 24, name: "Test", bundle: false, data: false, pin: false, supportsLocalAmounts: false, denominationType: "Test", senderCurrencyCode: "US", senderCurrencySymbol: "$", destinationCurrencyCode: "Dol", destinationCurrencySymbol: "$", commission: 1.0, internationalDiscount:  1.0, localDiscount:  1.0, mostPopularAmount:  1.0, mostPopularLocalAmount:  1.0, minAmount:  1.0, maxAmount:  1.0, localMinAmount: 3.2, localMaxAmount:  1.0, country: CountryOperator(isoName: "US", name: "US"), fx: Fx(rate: 1.0, currencyCode: "USD", id: 1, fxRate: 1.0, name: "USD"), logoUrls: [], fixedAmounts: [])], pageable: Pageable(sort: Sort(unsorted: false, sorted: false, empty: false), pageNumber: 1, pageSize: 2, offset: 2, unpaged: false, paged: false), totalElements: 3, totalPages: 4, last: false, sort: Sort(unsorted: false, sorted: false, empty: false), first: false, numberOfElements: 4, size: 4, number: 4, empty: false)
+        let geoPlanArray = [GeographicalRechargePlan(locationCode: "US", locationName: "United States", fixedAmounts: nil, localAmounts: nil, fixedAmountsDescriptions: nil, localFixedAmountsDescriptions: nil)]
+        let operatorModel = OperatorArray(content: [OperatorDetails(id: 24, operatorId: 24, name: "Test", bundle: false, data: false, pin: false, supportsLocalAmounts: false, denominationType: "Test", senderCurrencyCode: "US", senderCurrencySymbol: "$", destinationCurrencyCode: "Dol", destinationCurrencySymbol: "$", commission: 1.0, internationalDiscount:  1.0, localDiscount:  1.0, mostPopularAmount:  1.0, mostPopularLocalAmount:  1.0, minAmount:  1.0, maxAmount:  1.0, localMinAmount: 3.2, localMaxAmount:  1.0, country: CountryOperator(isoName: "US", name: "US"), fx: Fx(rate: 1.0, currencyCode: "USD", id: 1, fxRate: 1.0, name: "USD"), logoUrls: [], fixedAmounts: [], geographicalRechargePlans: geoPlanArray)], pageable: Pageable(sort: Sort(unsorted: false, sorted: false, empty: false), pageNumber: 1, pageSize: 2, offset: 2, unpaged: false, paged: false), totalElements: 3, totalPages: 4, last: false, sort: Sort(unsorted: false, sorted: false, empty: false), first: false, numberOfElements: 4, size: 4, number: 4, empty: false)
         XCTAssertEqual(24, operatorModel.content.first?.id)
     }
     
