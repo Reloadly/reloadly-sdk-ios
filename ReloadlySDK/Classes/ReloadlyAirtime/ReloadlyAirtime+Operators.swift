@@ -51,6 +51,7 @@ extension ReloadlyAirtime {
     public func getOperatorById(id: Int,
                                 suggestedAmounts: Bool? = nil,
                                 suggestedAmountsMap: Bool? = nil,
+                                supportsGeographicalRechargePlan: Bool? = nil,
                                 completionHandler: @escaping (Result<OperatorDetails, Error>) -> Void) {
         var endpoint = "/operators/\(id)"
         if let suggestedAmountsMap = suggestedAmountsMap {
@@ -60,6 +61,10 @@ extension ReloadlyAirtime {
         if let suggestedAmounts = suggestedAmounts {
             let prefix = endpoint.contains("=") ? "&" : "?"
             endpoint.append("\(prefix)suggestedAmounts=\(suggestedAmounts)")
+        }
+        if let supportsGeographicalRechargePlan = supportsGeographicalRechargePlan {
+            let prefix = endpoint.contains("=") ? "&" : "?"
+            endpoint.append("\(prefix)supportsGeographicalRechargePlan=\(supportsGeographicalRechargePlan)")
         }
         NetworkManager.shared.dataTask(serviceURL: endpoint, httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {

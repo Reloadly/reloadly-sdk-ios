@@ -42,31 +42,32 @@ public struct OperatorArray: Codable {
 public struct OperatorDetails: Codable {
     public let id: Int
     public let operatorId: Int
-    public let name: String
-    public let bundle: Bool
-    public let data: Bool
-    public let pin: Bool
-    public let supportsLocalAmounts: Bool
-    public let denominationType: String
-    public let senderCurrencyCode: String
-    public let senderCurrencySymbol: String
-    public let destinationCurrencyCode: String
-    public let destinationCurrencySymbol: String
-    public let commission: Double
-    public let internationalDiscount: Double
-    public let localDiscount: Double
-    public let mostPopularAmount: Double
+    public let name: String?
+    public let bundle: Bool?
+    public let data: Bool?
+    public let pin: Bool?
+    public let supportsLocalAmounts: Bool?
+    public let denominationType: String?
+    public let senderCurrencyCode: String?
+    public let senderCurrencySymbol: String?
+    public let destinationCurrencyCode: String?
+    public let destinationCurrencySymbol: String?
+    public let commission: Double?
+    public let internationalDiscount: Double?
+    public let localDiscount: Double?
+    public let mostPopularAmount: Double?
     public let mostPopularLocalAmount: Double?
     public let minAmount: Double?
     public let maxAmount: Double?
     public let localMinAmount: Double?
     public let localMaxAmount: Double?
-    public let country: CountryOperator
-    public let fx: Fx
-    public let logoUrls: [String]
-    public let fixedAmounts: [Double]
+    public let country: CountryOperator?
+    public let fx: Fx?
+    public let logoUrls: [String]?
+    public let fixedAmounts: [Double]?
+    public let geographicalRechargePlans: [GeographicalRechargePlan]?
 
-    public init(id: Int, operatorId: Int, name: String, bundle: Bool, data: Bool, pin: Bool, supportsLocalAmounts: Bool, denominationType: String, senderCurrencyCode: String, senderCurrencySymbol: String, destinationCurrencyCode: String, destinationCurrencySymbol: String, commission: Double, internationalDiscount: Double, localDiscount: Double, mostPopularAmount: Double, mostPopularLocalAmount: Double?, minAmount: Double?, maxAmount: Double?, localMinAmount: Double?, localMaxAmount: Double?, country: CountryOperator, fx: Fx, logoUrls: [String], fixedAmounts: [Double]) {
+    public init(id: Int, operatorId: Int, name: String?, bundle: Bool?, data: Bool?, pin: Bool?, supportsLocalAmounts: Bool?, denominationType: String?, senderCurrencyCode: String?, senderCurrencySymbol: String?, destinationCurrencyCode: String?, destinationCurrencySymbol: String?, commission: Double?, internationalDiscount: Double?, localDiscount: Double, mostPopularAmount: Double?, mostPopularLocalAmount: Double?, minAmount: Double?, maxAmount: Double?, localMinAmount: Double?, localMaxAmount: Double?, country: CountryOperator?, fx: Fx?, logoUrls: [String]?, fixedAmounts: [Double]?, geographicalRechargePlans: [GeographicalRechargePlan]?) {
         self.id = id
         self.operatorId = operatorId
         self.name = name
@@ -92,6 +93,7 @@ public struct OperatorDetails: Codable {
         self.fx = fx
         self.logoUrls = logoUrls
         self.fixedAmounts = fixedAmounts
+        self.geographicalRechargePlans = geographicalRechargePlans
     }
 }
 
@@ -120,5 +122,25 @@ public struct Fx: Codable {
         self.id = id
         self.fxRate = fxRate
         self.name = name
+    }
+}
+
+
+// MARK: - GeographicalRechargePlan
+public struct GeographicalRechargePlan: Codable {
+    public let locationCode: String?
+    public let locationName: String?
+    public let fixedAmounts: [Double]?
+    public let localAmounts: [Int]?
+    public let fixedAmountsDescriptions: Dictionary<String, String>?
+    public let localFixedAmountsDescriptions: Dictionary<String, String>?
+
+    public init(locationCode: String?, locationName: String?, fixedAmounts: [Double]?, localAmounts: [Int]?, fixedAmountsDescriptions: Dictionary<String, String>?, localFixedAmountsDescriptions: Dictionary<String, String>?) {
+        self.locationCode = locationCode
+        self.locationName = locationName
+        self.fixedAmounts = fixedAmounts
+        self.localAmounts = localAmounts
+        self.fixedAmountsDescriptions = fixedAmountsDescriptions
+        self.localFixedAmountsDescriptions = localFixedAmountsDescriptions
     }
 }
