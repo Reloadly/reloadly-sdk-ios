@@ -55,10 +55,11 @@ public class ReloadlyAuthentication {
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOtestrw", clientSecret: "c7gcNR4dOIAlmalojV35okbq--testsdfdsfsf", service: AuthenticationService(backendEnvironment: .sandbox), useTelemetry: true)
      ```
      */
-    public func configure(with clientId: String, clientSecret: String, service: AuthenticationServiceProtocol, logLevel: Level = .info, proxyConfiguration: ProxyConfigurator? = nil, useTelemetry: Bool = true) {
-        self.service = service
-        self.clientId = clientId
-        self.clientSecret = clientSecret
+    public func configure(with clientId: String? = nil, clientSecret: String? = nil, service: AuthenticationServiceProtocol? = nil, logLevel: Level = .info, proxyConfiguration: ProxyConfigurator? = nil, useTelemetry: Bool = true) {
+        let dictionary = Bundle.main.infoDictionary
+        self.service = service ?? AuthenticationService(backendEnvironment: (dictionary?["ReloadlySDKEnvironment"] as? String) ?? "sandbox")
+        self.clientId = clientId ?? (dictionary?["ReloadlySDKSecretId"] as? String) ?? ""
+        self.clientSecret = clientSecret ?? (dictionary?["ReloadlySDKClientId"] as? String) ?? ""
         self.logger.minLevel = logLevel
         self.proxyConfiguration = proxyConfiguration
         NetworkManager.shared.useTelemetry = useTelemetry

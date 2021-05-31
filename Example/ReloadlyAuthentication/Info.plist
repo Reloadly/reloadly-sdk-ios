@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>ReloadlySDKClientId</key>
+	<string>NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9</string>
+	<key>ReloadlySDKSecretId</key>
+	<string>c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh</string>
+	<key>ReloadlySDKEnvironment</key>
+	<string>sandbox</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

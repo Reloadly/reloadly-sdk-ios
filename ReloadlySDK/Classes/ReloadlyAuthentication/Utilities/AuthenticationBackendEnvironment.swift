@@ -8,7 +8,7 @@
 import Foundation
 import Foundation
 
-public enum AuthenticationBackendEnvironment {
+public enum AuthenticationBackendEnvironment: String {
     case production
     case sandbox
 
