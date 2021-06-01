@@ -68,6 +68,18 @@ import ReloadlySDK
 ```
 Initialise library at `AppDelegate`
 
+Also you can set ClientId, SecretId and environment at plist file of your app. Just paste:
+```swift
+
+<key>ReloadlySDKClientId</key>
+<string>PUT_YOUR_RELOADLY_CLIENT_ID_HERE/string>
+<key>ReloadlySDKSecretId</key>
+<string>PUT_YOUR_RELOADLY_CLIENT_SECRET_HERE</string>
+<key>ReloadlySDKEnvironment</key>
+<string>sandbox</string>
+
+```
+
 ```swift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -77,9 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        ReloadlyAuthentication.shared.configure(with: "clientID",
-                                                clientSecret: "clientSecret",
-                                                service: AuthenticationService(backendEnvironment: .sandbox))
+        ReloadlyAuthentication.shared.configure()
         return true
     }
 }

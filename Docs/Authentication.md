@@ -15,10 +15,10 @@ Initialise library at `AppDelegate`
 Also you can set ClientId, SecretId and environment at plist file of your app. Just paste:
 ```swift
 
-<key>PUT_YOUR_RELOADLY_CLIENT_ID_HERE</key>
-<string>client/string>
-<key>PUT_YOUR_RELOADLY_CLIENT_SECRET_HERE</key>
-<string>secret</string>
+<key>ReloadlySDKClientId</key>
+<string>PUT_YOUR_RELOADLY_CLIENT_ID_HERE/string>
+<key>ReloadlySDKSecretId</key>
+<string>PUT_YOUR_RELOADLY_CLIENT_SECRET_HERE</string>
 <key>ReloadlySDKEnvironment</key>
 <string>sandbox</string>
 
