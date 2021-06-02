@@ -30,7 +30,7 @@ your [Reloadly APIs credentials][api-credentials-help].
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 ### Demo application
-You can find examples at folder Example and run .workspace to test demo application with integrated SDK
+You can find some examples in the `Example` folder. Run .workspace to test the demo application with the SDK. Please see below, on how to specify your ClientId and SecretId.
 
 
 ## Requirements
@@ -66,9 +66,9 @@ Import ReloadlySDK
 ```swift
 import ReloadlySDK
 ```
-Initialise library at `AppDelegate`
+Initialise the library in the `AppDelegate`.
 
-Also you can set ClientId, SecretId and environment at plist file of your app. Just paste:
+You can set `ClientId`, `SecretId` and `environment` in the plist file of your app. Just paste the following in your plist file:
 ```swift
 
 <key>ReloadlySDKClientId</key>
@@ -86,7 +86,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ReloadlyAuthentication.shared.configure()
@@ -96,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ```
 
-Also you can setup additional settings like logLevel, proxy configuration.
+You can setup additional fine grained settings like logLevel, proxy configuration, environment etc.
 
 ## Getting Help
 
