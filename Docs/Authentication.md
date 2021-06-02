@@ -11,20 +11,16 @@ Import ReloadlySDK
 ```swift
 import ReloadlySDK
 ```
-Initialise library at `AppDelegate`
-Also you can set ClientId, SecretId and environment at plist file of your app. Just paste:
-```swift
+Initialise the library using `AppDelegate`. You can set the `ClientId`, `SecretId` and `environment` in the plist file of your app. Just paste the following in your plist file:
 
+```swift
 <key>ReloadlySDKClientId</key>
 <string>PUT_YOUR_RELOADLY_CLIENT_ID_HERE/string>
 <key>ReloadlySDKSecretId</key>
 <string>PUT_YOUR_RELOADLY_CLIENT_SECRET_HERE</string>
 <key>ReloadlySDKEnvironment</key>
 <string>sandbox</string>
-
 ```
-
-
 
 
 ```swift
@@ -32,7 +28,6 @@ Also you can set ClientId, SecretId and environment at plist file of your app. J
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -42,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-Access token will generade and refresh automaticaly during request any Reloadly SDK but if you need to manage access token you can use provided api calls:
+The access token will be generated and refreshed automaticaly during requests to Reloadly APIs. However, if you need to manage the access token yourself, you can make use of the provided api calls as shown below:
 
 ### Request new accessToken
 ```swift
@@ -56,7 +51,7 @@ Access token will generade and refresh automaticaly during request any Reloadly 
     }
 ```
 
-### get accessToken from keychain if contains
+### Get accessToken from keychain if one is available
 ```swift
   let token = ReloadlyAuthentication.shared.getAccessToken()
   print(token)
@@ -64,21 +59,18 @@ Access token will generade and refresh automaticaly during request any Reloadly 
 
 ### Logging request & response
 
-To enable API default logging please change log level at SDK initialization
-Also you can switch between backendEnvironment for SDK, by default production
+To enable API default logging at `info` level, please change log level during SDK initialization.
+You can switch the backendEnvironment that the SDK integracts with; by default the prouction environment backend is used.
 
 ```swift
-  ReloadlyAuthentication.shared.configure(with: "id",
-                                              clientSecret: "secret",
-                                              service: AuthenticationService(backendEnvironment: .sandbox),
-                                              logLevel: .info)
+  ReloadlyAuthentication.shared.configure(service: AuthenticationService(backendEnvironment: .sandbox), logLevel: .info)
 ```
 
 ## Customizing The API Client Instance
 
 ### Configuring Timeouts
 
-Used to configure additional options, connect and read timeouts can be configured globally:
+Connect and read timeouts can be configured globally:
 
 ```swift
   ReloadlyAuthentication.shared.setCustomTimeouts(readTimeout: 30.0, writeTimeout: 30.0)
@@ -94,7 +86,8 @@ Used to configure additional options, connect and read timeouts can be configure
                                                 logLevel: .info, proxyConfiguration: proxyConfiguratorWithCredentials)
 
 ```
-Also username and password can be nil to use proxy without credentials
+Also username and password can be nil to use proxy without credentials. 
+Note that, while providing the `clientId` and `clientSecret` is supported as shown below, it is generallly discouraged. Make use of the plist instead to specify the clientId and clientSecret.
 
 
 ### Request latency telemetry
