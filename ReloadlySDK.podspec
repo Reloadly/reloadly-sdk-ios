@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReloadlySDK'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'The Reloadly SDK to easily work with Reloadly Services'
 
 
