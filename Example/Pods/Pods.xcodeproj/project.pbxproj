@@ -38,6 +38,10 @@
 		A4A680ABC25F8C9F730EA4BAEB52AEEC /* ReloadlySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC41314C2A07D306BFC79E3E21C06C11 /* ReloadlySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D24AB5E778196E2BD8B6D9E376596715 /* Pods-ReloadlyAuthentication_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6827B24491E1DAA988C17129B8123E55 /* Pods-ReloadlyAuthentication_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA87991AE9CC00F0A64D467E852AFDC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F3B7BE29274AD7990084A3BC /* ReloadlyGiftcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */; };
+		F3BDE029274BF552006983AB /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE028274BF552006983AB /* ProductsModel.swift */; };
+		F3BDE02D274BFE0E006983AB /* OrderGiftcardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */; };
+		F3BDE02F274BFF2D006983AB /* RedeemCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE02E274BFF2D006983AB /* RedeemCodeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,10 @@
 		EA173E0F1655BBE1D5D6DEE4B8F8828C /* Pods-ReloadlyAuthentication_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReloadlyAuthentication_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EBE6EFD91CA2F531C1552AFA036FE598 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC41314C2A07D306BFC79E3E21C06C11 /* ReloadlySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReloadlySDK-umbrella.h"; sourceTree = "<group>"; };
+		F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadlyGiftcard.swift; sourceTree = "<group>"; };
+		F3BDE028274BF552006983AB /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
+		F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGiftcardModel.swift; sourceTree = "<group>"; };
+		F3BDE02E274BFF2D006983AB /* RedeemCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemCodeModel.swift; sourceTree = "<group>"; };
 		F77FF3918786364D682C453189BEC190 /* Pods_ReloadlyAuthentication_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReloadlyAuthentication_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECCC601891B10E1F805EE8C1A0DDCDC /* Pods-ReloadlyAuthentication_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReloadlyAuthentication_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +302,7 @@
 			children = (
 				1A7743BA26033FC700D34144 /* ReloadlyAirtime */,
 				1A7743C826033FC700D34144 /* ReloadlyAuthentication */,
+				F3B7BE27274AD7590084A3BC /* ReloadlyGiftcard */,
 				962E6B909208D6C753A0977BBC81F2D5 /* Pod */,
 				A1456B760C0CF163545F9AC1449EE3A8 /* Support Files */,
 			);
@@ -342,6 +351,26 @@
 				B77517A74ECA920AB5954FE4552FC0C1 /* ReloadlySDK */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F3B7BE27274AD7590084A3BC /* ReloadlyGiftcard */ = {
+			isa = PBXGroup;
+			children = (
+				F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */,
+				F3BDE030274BFFB2006983AB /* Models */,
+			);
+			name = ReloadlyGiftcard;
+			path = ReloadlySDK/Classes/ReloadlyGiftcard;
+			sourceTree = "<group>";
+		};
+		F3BDE030274BFFB2006983AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3BDE028274BF552006983AB /* ProductsModel.swift */,
+				F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */,
+				F3BDE02E274BFF2D006983AB /* RedeemCodeModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +466,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -505,13 +534,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7743EF26033FC800D34144 /* ErrorModel.swift in Sources */,
+				F3B7BE29274AD7990084A3BC /* ReloadlyGiftcard.swift in Sources */,
 				1A7743E226033FC700D34144 /* TopupsModel.swift in Sources */,
 				1A7743DC26033FC700D34144 /* BalanceModel.swift in Sources */,
 				1A7743DF26033FC700D34144 /* OperatorModel.swift in Sources */,
 				1A7743F526033FC800D34144 /* AuthenticationBackendEnvironment.swift in Sources */,
+				F3BDE029274BF552006983AB /* ProductsModel.swift in Sources */,
 				30802B8A10C02A81289543FC17C784FB /* ReloadlySDK-dummy.m in Sources */,
 				1A7743E126033FC700D34144 /* DiscountsModel.swift in Sources */,
 				1A7743DE26033FC700D34144 /* PhoneModel.swift in Sources */,
+				F3BDE02F274BFF2D006983AB /* RedeemCodeModel.swift in Sources */,
 				1A7743E326033FC700D34144 /* ReloadlyAirtime+Promotions.swift in Sources */,
 				1A7743DD26033FC700D34144 /* CountryModel.swift in Sources */,
 				1A7743E026033FC700D34144 /* PromotionModel.swift in Sources */,
@@ -525,6 +557,7 @@
 				1A7743E526033FC700D34144 /* ReloadlyAirtime+Operators.swift in Sources */,
 				1A7743F126033FC800D34144 /* ReloadlyAuthentication.swift in Sources */,
 				1A7743EA26033FC800D34144 /* Formatter.swift in Sources */,
+				F3BDE02D274BFE0E006983AB /* OrderGiftcardModel.swift in Sources */,
 				1A7743E426033FC700D34144 /* ReloadlyAirtime.swift in Sources */,
 				1A7743F026033FC800D34144 /* OAuth2Token.swift in Sources */,
 			);
@@ -564,7 +597,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Tests/Pods-ReloadlyAuthentication_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Tests/Pods-ReloadlyAuthentication_Tests.modulemap";
@@ -598,7 +631,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Example/Pods-ReloadlyAuthentication_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Example/Pods-ReloadlyAuthentication_Example.modulemap";
@@ -666,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -693,7 +726,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Tests/Pods-ReloadlyAuthentication_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Tests/Pods-ReloadlyAuthentication_Tests.modulemap";
@@ -726,7 +759,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ReloadlySDK/ReloadlySDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ReloadlySDK/ReloadlySDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ReloadlySDK/ReloadlySDK.modulemap";
 				PRODUCT_MODULE_NAME = ReloadlySDK;
@@ -758,7 +791,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Example/Pods-ReloadlyAuthentication_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ReloadlyAuthentication_Example/Pods-ReloadlyAuthentication_Example.modulemap";
@@ -828,7 +861,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -857,7 +890,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ReloadlySDK/ReloadlySDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ReloadlySDK/ReloadlySDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ReloadlySDK/ReloadlySDK.modulemap";
 				PRODUCT_MODULE_NAME = ReloadlySDK;

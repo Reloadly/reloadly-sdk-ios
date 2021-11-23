@@ -18,8 +18,8 @@ public class ReloadlyAuthentication {
 
     public static let shared = ReloadlyAuthentication()
     let storageKey = "OAuth2Token"
-    /// Service's backend environment. Default value is `.production`. Make sure to use `.production` in you release (App Store)
-    public private(set) var service: AuthenticationServiceProtocol = AuthenticationService(backendEnvironment: .sandbox)
+    /// Service's backend environment. Default value is `.airtimeSandbox`. Make sure to use `.airtimeProduction` in you release (App Store)
+    public private(set) var service: AuthenticationServiceProtocol = AuthenticationService(backendEnvironment: .airtimeSandbox)
     let storage = Keychain()
     private var clientId: String?
     private var clientSecret: String?
@@ -57,7 +57,7 @@ public class ReloadlyAuthentication {
      */
     public func configure(with clientId: String? = nil, clientSecret: String? = nil, service: AuthenticationServiceProtocol? = nil, logLevel: Level = .info, proxyConfiguration: ProxyConfigurator? = nil, useTelemetry: Bool = true) {
         let dictionary = Bundle.main.infoDictionary
-        self.service = service ?? AuthenticationService(backendEnvironment: (dictionary?["ReloadlySDKEnvironment"] as? String) ?? "sandbox")
+        self.service = service ?? AuthenticationService(backendEnvironment: (dictionary?["ReloadlySDKEnvironment"] as? String) ?? "airtimeSandbox")
         self.clientId = clientId ?? (dictionary?["ReloadlySDKClientId"] as? String) ?? ""
         self.clientSecret = clientSecret ?? (dictionary?["ReloadlySDKSecretId"] as? String) ?? ""
         self.logger.minLevel = logLevel

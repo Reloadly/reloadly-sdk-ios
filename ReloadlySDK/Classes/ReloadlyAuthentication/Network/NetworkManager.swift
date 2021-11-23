@@ -30,7 +30,7 @@ class NetworkManager {
     
     private func requestAuth(serviceURL: String, httpMethod: HttpMethod, parameters: [String:String]?, proxyConfigurator: ProxyConfigurator? = nil, completion: @escaping (Result<Data, Error>) -> Void) -> Void {
         
-        var request = URLRequest(url: URL(string: "https://auth.reloadly.com\(serviceURL)")!)
+        var request = URLRequest(url: URL(string: "\(ReloadlyAuthentication.shared.service.backendEnvironment.authURL)\(serviceURL)")!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = httpMethod.rawValue
         

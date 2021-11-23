@@ -26,7 +26,7 @@ public final class AuthenticationService: AuthenticationServiceProtocol {
     }
     
     public init(backendEnvironment: String) {
-        self.backendEnvironment = AuthenticationBackendEnvironment(rawValue: backendEnvironment) ?? .sandbox
+        self.backendEnvironment = AuthenticationBackendEnvironment(rawValue: backendEnvironment) ?? .airtimeSandbox
     }
 
     private func notifyAboutUpdate() {

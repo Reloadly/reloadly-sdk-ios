@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Discounts
 public struct Discounts: Codable {
-    public let content: [Content]
+    public let content: [Discount]
     public let pageable: Pageable
     public let totalElements: Int
     public let totalPages: Int
@@ -21,7 +21,7 @@ public struct Discounts: Codable {
     public let number: Int
     public let empty: Bool
 
-    public init(content: [Content], pageable: Pageable, totalElements: Int, totalPages: Int, last: Bool, sort: Sort, first: Bool, numberOfElements: Int, size: Int, number: Int, empty: Bool) {
+    public init(content: [Discount], pageable: Pageable, totalElements: Int, totalPages: Int, last: Bool, sort: Sort, first: Bool, numberOfElements: Int, size: Int, number: Int, empty: Bool) {
         self.content = content
         self.pageable = pageable
         self.totalElements = totalElements
@@ -66,7 +66,7 @@ public struct Transactions: Codable {
 }
 
 // MARK: - Content
-public struct Content: Codable {
+public struct Discount: Codable {
     public let percentage: Double?
     public let internationalPercentage: Double?
     public let localPercentage: Double?
