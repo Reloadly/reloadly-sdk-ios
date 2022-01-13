@@ -65,7 +65,7 @@ class ReloadlyGiftcardTest: XCTestCase {
     }
     
     func testGetProductByISO() {
-        ReloadlyGiftcard.shared.getProductByISO() { result in
+        ReloadlyGiftcard.shared.getProductByISO(countryCode: "US") { result in
             XCTAssertNotNil(result)
         }
     }

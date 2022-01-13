@@ -38,6 +38,7 @@
 		A4A680ABC25F8C9F730EA4BAEB52AEEC /* ReloadlySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC41314C2A07D306BFC79E3E21C06C11 /* ReloadlySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D24AB5E778196E2BD8B6D9E376596715 /* Pods-ReloadlyAuthentication_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6827B24491E1DAA988C17129B8123E55 /* Pods-ReloadlyAuthentication_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA87991AE9CC00F0A64D467E852AFDC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F331A5FD2790A35B00C3B416 /* SortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F331A5FC2790A35B00C3B416 /* SortModel.swift */; };
 		F3B7BE29274AD7990084A3BC /* ReloadlyGiftcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */; };
 		F3BDE029274BF552006983AB /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE028274BF552006983AB /* ProductsModel.swift */; };
 		F3BDE02D274BFE0E006983AB /* OrderGiftcardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */; };
@@ -114,6 +115,7 @@
 		EA173E0F1655BBE1D5D6DEE4B8F8828C /* Pods-ReloadlyAuthentication_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReloadlyAuthentication_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EBE6EFD91CA2F531C1552AFA036FE598 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC41314C2A07D306BFC79E3E21C06C11 /* ReloadlySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReloadlySDK-umbrella.h"; sourceTree = "<group>"; };
+		F331A5FC2790A35B00C3B416 /* SortModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModel.swift; sourceTree = "<group>"; };
 		F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadlyGiftcard.swift; sourceTree = "<group>"; };
 		F3BDE028274BF552006983AB /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 		F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGiftcardModel.swift; sourceTree = "<group>"; };
@@ -153,27 +155,12 @@
 		1A7743BA26033FC700D34144 /* ReloadlyAirtime */ = {
 			isa = PBXGroup;
 			children = (
-				1A7743BB26033FC700D34144 /* Models */,
 				1A7743C326033FC700D34144 /* ReloadlyAirtime+Promotions.swift */,
 				1A7743C426033FC700D34144 /* ReloadlyAirtime.swift */,
 				1A7743C526033FC700D34144 /* ReloadlyAirtime+Operators.swift */,
 			);
 			name = ReloadlyAirtime;
 			path = ReloadlySDK/Classes/ReloadlyAirtime;
-			sourceTree = "<group>";
-		};
-		1A7743BB26033FC700D34144 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1A7743BC26033FC700D34144 /* BalanceModel.swift */,
-				1A7743BD26033FC700D34144 /* CountryModel.swift */,
-				1A7743BE26033FC700D34144 /* PhoneModel.swift */,
-				1A7743BF26033FC700D34144 /* OperatorModel.swift */,
-				1A7743C026033FC700D34144 /* PromotionModel.swift */,
-				1A7743C126033FC700D34144 /* DiscountsModel.swift */,
-				1A7743C226033FC700D34144 /* TopupsModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1A7743C826033FC700D34144 /* ReloadlyAuthentication */ = {
@@ -212,6 +199,14 @@
 			children = (
 				1A7743D426033FC700D34144 /* ErrorModel.swift */,
 				1A7743D526033FC700D34144 /* OAuth2Token.swift */,
+				1A7743BD26033FC700D34144 /* CountryModel.swift */,
+				1A7743BC26033FC700D34144 /* BalanceModel.swift */,
+				1A7743BE26033FC700D34144 /* PhoneModel.swift */,
+				1A7743BF26033FC700D34144 /* OperatorModel.swift */,
+				1A7743C026033FC700D34144 /* PromotionModel.swift */,
+				1A7743C126033FC700D34144 /* DiscountsModel.swift */,
+				1A7743C226033FC700D34144 /* TopupsModel.swift */,
+				F331A5FC2790A35B00C3B416 /* SortModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,6 +539,7 @@
 				1A7743E126033FC700D34144 /* DiscountsModel.swift in Sources */,
 				1A7743DE26033FC700D34144 /* PhoneModel.swift in Sources */,
 				F3BDE02F274BFF2D006983AB /* RedeemCodeModel.swift in Sources */,
+				F331A5FD2790A35B00C3B416 /* SortModel.swift in Sources */,
 				1A7743E326033FC700D34144 /* ReloadlyAirtime+Promotions.swift in Sources */,
 				1A7743DD26033FC700D34144 /* CountryModel.swift in Sources */,
 				1A7743E026033FC700D34144 /* PromotionModel.swift in Sources */,

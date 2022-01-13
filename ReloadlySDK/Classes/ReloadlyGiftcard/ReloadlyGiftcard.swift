@@ -59,7 +59,7 @@ public class ReloadlyGiftcard {
         }
     }
     
-    public func     , completionHandler: @escaping (Result<Brand, Error>) -> Void) {
+    public func redeemInstruction(by id: Int, completionHandler: @escaping (Result<Brand, Error>) -> Void) {
         NetworkManager.shared.dataTask(serviceURL: "/redeem-instructions/\(id)", httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {
             case .success(let data):
