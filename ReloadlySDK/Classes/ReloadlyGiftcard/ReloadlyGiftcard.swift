@@ -60,7 +60,7 @@ public class ReloadlyGiftcard {
     }
     
     public func redeemInstruction(by id: Int, completionHandler: @escaping (Result<Brand, Error>) -> Void) {
-        NetworkManager.shared.dataTask(serviceURL: "/redeem-instructions/\(id)", httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
+        NetworkManager.shared.dataTask(serviceURL: "/brands/\(id)/redeem-instructions", httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {
             case .success(let data):
                 let result: Result<Brand, Error> = self.processSuccess(data: data)
@@ -126,15 +126,33 @@ public class ReloadlyGiftcard {
                               unitPrice: Double,
                               customIdentifier: String,
                               senderName: String,
-                              recipientEmail: String, completionHandler: @escaping (Result<OrderGiftcard, Error>) -> Void) {
-        let parameters: [String: Any] = [
+                              recipientEmail: String? = nil,
+                              recipientPhoneDetails: RecipientPhoneDetailsModel? = nil,
+                              completionHandler: @escaping (Result<OrderGiftcard, Error>) -> Void) {
+        var parameters: [String: Any] = [
                 "productId": productId,
                 "countryCode": countryCode,
                 "quantity": quantity,
                 "unitPrice": unitPrice,
                 "customIdentifier": customIdentifier,
-                "senderName": senderName,
-                "recipientEmail": recipientEmail]
+                "senderName": senderName]
+        if let recipientEmail = recipientEmail {
+            parameters.updateValue(recipientEmail, forKey: "recipientEmail")
+        }
+        
+        if let recipientPhoneDetails = recipientPhoneDetails,
+            let countryCode = recipientPhoneDetails.countryCode,
+            let phone = recipientPhoneDetails.phoneNumber {
+            let value = ["countryCode": countryCode,
+                         "phoneNumber": phone
+                        ]
+            parameters.updateValue(value, forKey: "recipientPhoneDetails")
+        }
+        
+        if recipientEmail == nil && recipientPhoneDetails == nil {
+            completionHandler(.failure(ServiceError.unableToProcesRequest(message: "recipientPhoneDetails or recipientEmail should be filled")))
+            return
+        }
         
         NetworkManager.shared.dataTask(serviceURL: "/orders", httpMethod: .post, parameters: parameters, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {

@@ -39,6 +39,7 @@
 		D24AB5E778196E2BD8B6D9E376596715 /* Pods-ReloadlyAuthentication_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6827B24491E1DAA988C17129B8123E55 /* Pods-ReloadlyAuthentication_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA87991AE9CC00F0A64D467E852AFDC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		F331A5FD2790A35B00C3B416 /* SortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F331A5FC2790A35B00C3B416 /* SortModel.swift */; };
+		F34FC6C22798739200B2CF05 /* RecipientPhoneDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FC6C12798739100B2CF05 /* RecipientPhoneDetailsModel.swift */; };
 		F3B7BE29274AD7990084A3BC /* ReloadlyGiftcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */; };
 		F3BDE029274BF552006983AB /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE028274BF552006983AB /* ProductsModel.swift */; };
 		F3BDE02D274BFE0E006983AB /* OrderGiftcardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */; };
@@ -116,6 +117,7 @@
 		EBE6EFD91CA2F531C1552AFA036FE598 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC41314C2A07D306BFC79E3E21C06C11 /* ReloadlySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReloadlySDK-umbrella.h"; sourceTree = "<group>"; };
 		F331A5FC2790A35B00C3B416 /* SortModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModel.swift; sourceTree = "<group>"; };
+		F34FC6C12798739100B2CF05 /* RecipientPhoneDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientPhoneDetailsModel.swift; sourceTree = "<group>"; };
 		F3B7BE28274AD7990084A3BC /* ReloadlyGiftcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadlyGiftcard.swift; sourceTree = "<group>"; };
 		F3BDE028274BF552006983AB /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 		F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGiftcardModel.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				F3BDE028274BF552006983AB /* ProductsModel.swift */,
 				F3BDE02C274BFE0E006983AB /* OrderGiftcardModel.swift */,
 				F3BDE02E274BFF2D006983AB /* RedeemCodeModel.swift */,
+				F34FC6C12798739100B2CF05 /* RecipientPhoneDetailsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				F331A5FD2790A35B00C3B416 /* SortModel.swift in Sources */,
 				1A7743E326033FC700D34144 /* ReloadlyAirtime+Promotions.swift in Sources */,
 				1A7743DD26033FC700D34144 /* CountryModel.swift in Sources */,
+				F34FC6C22798739200B2CF05 /* RecipientPhoneDetailsModel.swift in Sources */,
 				1A7743E026033FC700D34144 /* PromotionModel.swift in Sources */,
 				1A7743EE26033FC800D34144 /* NetworkManager.swift in Sources */,
 				1A7743F326033FC800D34144 /* ProxyConfigurator.swift in Sources */,
