@@ -19,9 +19,8 @@ Initialise the library using `AppDelegate`. You can set the `ClientId`, `SecretI
 <key>ReloadlySDKSecretId</key>
 <string>PUT_YOUR_RELOADLY_CLIENT_SECRET_HERE</string>
 <key>ReloadlySDKEnvironment</key>
-<string>sandbox</string>
+<string>airtimeSandbox</string>
 ```
-
 
 ```swift
 @UIApplicationMain
@@ -63,7 +62,7 @@ To enable API default logging at `info` level, please change log level during SD
 You can switch the backendEnvironment that the SDK integracts with; by default the prouction environment backend is used.
 
 ```swift
-  ReloadlyAuthentication.shared.configure(service: AuthenticationService(backendEnvironment: .sandbox), logLevel: .info)
+  ReloadlyAuthentication.shared.configure(service: AuthenticationService(backendEnvironment: .airtimeSandbox), logLevel: .info)
 ```
 
 ## Customizing The API Client Instance
@@ -82,11 +81,11 @@ Connect and read timeouts can be configured globally:
   let proxyConfiguratorWithCredentials = ProxyConfigurator(hostUrl: "url", port: 8043, username: "username", password: "password")
   ReloadlyAuthentication.shared.configure(with: "id",
                                                 clientSecret: "secret",
-                                                service: AuthenticationService(backendEnvironment: .sandbox),
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox),
                                                 logLevel: .info, proxyConfiguration: proxyConfiguratorWithCredentials)
 
 ```
-Also username and password can be nil to use proxy without credentials. 
+Also username and password can be nil to use proxy without credentials.
 Note that, while providing the `clientId` and `clientSecret` is supported as shown below, it is generallly discouraged. Make use of the plist instead to specify the clientId and clientSecret.
 
 
@@ -99,7 +98,7 @@ You can disable this behavior if you prefer:
 ```swift
 ReloadlyAuthentication.shared.configure(with: "id",
                                             clientSecret: "secret",
-                                            service: AuthenticationService(backendEnvironment: .sandbox),
+                                            service: AuthenticationService(backendEnvironment: .airtimeSandbox),
                                             logLevel: .info, useTelemetry: false)
 
 ```

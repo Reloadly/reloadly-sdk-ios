@@ -17,6 +17,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* AutenticationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* AutenticationTest.swift */; };
 		A1BAE5131423FAF995F164B3 /* Pods_ReloadlyAuthentication_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFDB84F883D67EF72541412B /* Pods_ReloadlyAuthentication_Example.framework */; };
+		F3BDE034274C0152006983AB /* ReloadlyGiftcardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE033274C0152006983AB /* ReloadlyGiftcardTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		67341B0D82C5099B1167DA22 /* Pods-ReloadlyAuthentication_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReloadlyAuthentication_Tests.release.xcconfig"; path = "Target Support Files/Pods-ReloadlyAuthentication_Tests/Pods-ReloadlyAuthentication_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A4FA8A87922145E14255079E /* Pods-ReloadlyAuthentication_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReloadlyAuthentication_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ReloadlyAuthentication_Tests/Pods-ReloadlyAuthentication_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFDB84F883D67EF72541412B /* Pods_ReloadlyAuthentication_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReloadlyAuthentication_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BDE033274C0152006983AB /* ReloadlyGiftcardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadlyGiftcardTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				607FACEB1AFB9204008FA782 /* AutenticationTest.swift */,
 				1A4B7B9D2604EAFA004A00AA /* DemoAppTest.swift */,
 				1A7744062603521800D34144 /* ReloadlyAirtimeTest.swift */,
+				F3BDE033274C0152006983AB /* ReloadlyGiftcardTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -222,7 +225,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1240;
+						LastSwiftMigration = 1310;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* AutenticationTest.swift in Sources */,
+				F3BDE034274C0152006983AB /* ReloadlyGiftcardTest.swift in Sources */,
 				1A77440F2603530700D34144 /* ReloadlyAirtimeTest.swift in Sources */,
 				1A4B7B9E2604EAFA004A00AA /* DemoAppTest.swift in Sources */,
 			);
@@ -523,6 +527,7 @@
 			baseConfigurationReference = A4FA8A87922145E14255079E /* Pods-ReloadlyAuthentication_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -535,6 +540,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReloadlyAuthentication_Example.app/ReloadlyAuthentication_Example";
@@ -546,6 +552,7 @@
 			baseConfigurationReference = 67341B0D82C5099B1167DA22 /* Pods-ReloadlyAuthentication_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

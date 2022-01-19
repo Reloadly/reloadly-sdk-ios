@@ -13,3 +13,7 @@
 * [Promotion Operations](https://github.com/Reloadly/reloadly-sdk-ios/blob/main/Docs/Promotion.md)
 * [Report Operations](https://github.com/Reloadly/reloadly-sdk-ios/blob/main/Docs/Report.md)
 * [Topup Operations](https://github.com/Reloadly/reloadly-sdk-ios/blob/main/Docs/Topup.md)
+
+## GiftCard SDK
+
+* [GiftcardsSDK](https://github.com/Reloadly/reloadly-sdk-ios/blob/main/Docs/GiftcardsSDK.md)

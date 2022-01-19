@@ -15,7 +15,7 @@ class ReloadlyAirtimeTest: XCTestCase {
         super.setUp()
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
                                                 clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
-                                                service: AuthenticationService(backendEnvironment: .sandbox))
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox))
         ReloadlyAuthentication.shared.requestAccessToken() { result in
             XCTAssertNotNil(result)
         }
@@ -126,7 +126,7 @@ class ReloadlyAirtimeTest: XCTestCase {
         let proxy = ProxyConfigurator(hostUrl: "localhost", port: 80, username: "username", password: "password")
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
                                                 clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
-                                                service: AuthenticationService(backendEnvironment: .sandbox), proxyConfiguration: proxy)
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox), proxyConfiguration: proxy)
         ReloadlyAirtime.shared.getAccountBalance() { result in
             XCTAssertNotNil(result)
         }
@@ -136,7 +136,7 @@ class ReloadlyAirtimeTest: XCTestCase {
     func testNotExpiredToken() {
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
                                                 clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
-                                                service: AuthenticationService(backendEnvironment: .sandbox))
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox))
         ReloadlyAuthentication.shared.requestAccessToken(completionHandler: { result in
             XCTAssertNotNil(result)
         })
@@ -145,7 +145,7 @@ class ReloadlyAirtimeTest: XCTestCase {
     func testEmptyToken() {
         ReloadlyAuthentication.shared.configure(with: "",
                                                 clientSecret: "",
-                                                service: AuthenticationService(backendEnvironment: .sandbox))
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox))
         ReloadlyAuthentication.shared.requestAccessToken(completionHandler: { result in
             XCTAssertNotNil(result)
         })
@@ -176,8 +176,8 @@ class ReloadlyAirtimeTest: XCTestCase {
     
     
     func testEnvironment() {
-        let service = AuthenticationService(backendEnvironment: .production)
-        service.backendEnvironment = .sandbox
+        let service = AuthenticationService(backendEnvironment: .airtimeProduction)
+        service.backendEnvironment = .airtimeSandbox
         XCTAssertNotNil(service)
     }
     
@@ -209,7 +209,7 @@ class ReloadlyAirtimeTest: XCTestCase {
     
     
     func testDiscountsModel() {
-        let discount = Discounts(content: [Content(percentage: 2.2, internationalPercentage: 23.21, localPercentage: 13.1, updatedAt: nil, contentOperator: nil)], pageable: Pageable(sort: Sort(unsorted: false, sorted: false, empty: false), pageNumber: 1, pageSize: 2, offset: 2, unpaged: false, paged: false), totalElements: 1, totalPages: 3, last: false, sort: Sort(unsorted: false, sorted: false, empty: false), first: false, numberOfElements: 3, size: 3, number: 3, empty: false)
+        let discount = Discounts(content: [Discount(percentage: 2.2, internationalPercentage: 23.21, localPercentage: 13.1, updatedAt: nil, contentOperator: nil)], pageable: Pageable(sort: Sort(unsorted: false, sorted: false, empty: false), pageNumber: 1, pageSize: 2, offset: 2, unpaged: false, paged: false), totalElements: 1, totalPages: 3, last: false, sort: Sort(unsorted: false, sorted: false, empty: false), first: false, numberOfElements: 3, size: 3, number: 3, empty: false)
         XCTAssertEqual(2.2, discount.content.first?.percentage)
     }
     
@@ -230,7 +230,7 @@ class ReloadlyAirtimeTest: XCTestCase {
     func testRequestAuth() {
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
                                                 clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
-                                                service: AuthenticationService(backendEnvironment: .sandbox))
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox))
         ReloadlyAuthentication.shared.requestAccessToken() { result in
             XCTAssertNotNil(result)
         }

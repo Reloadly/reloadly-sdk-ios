@@ -6,7 +6,7 @@ class AutenticationTests: XCTestCase {
         super.setUp()
         ReloadlyAuthentication.shared.configure(with: "NxhvFxDrXtX34VL1DLHsbQGLOPgE8qL9",
                                                 clientSecret: "c7gcNR4dOIAlmalojV35okbq--tqqVhPPr2bvcsXlmKadewvaXdRSxENwfpyFywh",
-                                                service: AuthenticationService(backendEnvironment: .sandbox))
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox))
     }
     
     override func tearDown() {
@@ -34,7 +34,7 @@ class AutenticationTests: XCTestCase {
         let proxy = ProxyConfigurator(hostUrl: "localhost", port: 80, username: "username", password: "password")
         ReloadlyAuthentication.shared.configure(with: "id",
                                                 clientSecret: "id",
-                                                service: AuthenticationService(backendEnvironment: .sandbox), logLevel: .debug, proxyConfiguration: proxy)
+                                                service: AuthenticationService(backendEnvironment: .airtimeSandbox), logLevel: .debug, proxyConfiguration: proxy)
         ReloadlyAuthentication.shared.requestAccessToken() { result in
             switch result {
             case .success(let token):

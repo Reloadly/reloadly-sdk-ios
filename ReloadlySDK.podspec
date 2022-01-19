@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReloadlySDK'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'The Reloadly SDK to easily work with Reloadly Services'
 
 
@@ -21,7 +21,7 @@ The Reloadly SDK for iOS enables iOS developers to easily work with Reloadly Ser
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '4taras4' => '4taras4@gmail.com' }
   s.source           = { :git => 'https://github.com/Reloadly/reloadly-sdk-ios.git', :tag => s.version.to_s }
-  s.swift_version = ['4.2', '5.0']
+  s.swift_version = ['4.2', '5.3']
 
   s.ios.deployment_target = '10.0'
   s.source_files = 'ReloadlySDK/Classes/**/*'
@@ -36,4 +36,7 @@ The Reloadly SDK for iOS enables iOS developers to easily work with Reloadly Ser
       co.source_files  = "ReloadlySDK/Classes/ReloadlyAuthentication/**/*.swift"
   end
 
+  s.subspec 'Giftcard' do |co|
+      co.source_files  = "ReloadlySDK/Classes/ReloadlyGiftcard/**/*.swift"
+  end
 end

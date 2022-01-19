@@ -60,11 +60,11 @@ public class ReloadlyAirtime {
         }
     }
     
-    public func getDiscountsByOperator(id: Int, completionHandler: @escaping (Result<Content, Error>) -> Void) {
+    public func getDiscountsByOperator(id: Int, completionHandler: @escaping (Result<Discount, Error>) -> Void) {
         NetworkManager.shared.dataTask(serviceURL: "/operators/\(id)/commissions", httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {
             case .success(let data):
-                let discount: Result<Content, Error> = self.processSuccess(data: data)
+                let discount: Result<Discount, Error> = self.processSuccess(data: data)
                 completionHandler(discount)
             case .failure(let error):
                 completionHandler(.failure(error))
@@ -112,11 +112,11 @@ public class ReloadlyAirtime {
     }
     
     
-    public func getTransactionById(id: Int, completionHandler: @escaping (Result<Content, Error>) -> Void) {
+    public func getTransactionById(id: Int, completionHandler: @escaping (Result<Discount, Error>) -> Void) {
         NetworkManager.shared.dataTask(serviceURL: "/topups/reports/transactions/\(id)", httpMethod: .get, parameters: nil, proxyConfigurator: ReloadlyAuthentication.shared.proxyConfiguration) { result in
             switch result {
             case .success(let data):
-                let discount: Result<Content, Error> = self.processSuccess(data: data)
+                let discount: Result<Discount, Error> = self.processSuccess(data: data)
                 completionHandler(discount)
             case .failure(let error):
                 completionHandler(.failure(error))

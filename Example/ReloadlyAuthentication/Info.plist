@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>ReloadlySDKClientId</key>
-	<string></string>
+	<string>CnRq3ACS1AsOYb2hnW8iEAOZq09pEPOT</string>
 	<key>ReloadlySDKSecretId</key>
-	<string></string>
+	<string>0Q8t7n7chP-KESrM0Mauy6U3UmxGR9-ATE0k8CuLoSVk7cDF1Yz2pI7mAh5TcEg</string>
 	<key>ReloadlySDKEnvironment</key>
-	<string>sandbox</string>
+	<string>giftcardSandbox</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
